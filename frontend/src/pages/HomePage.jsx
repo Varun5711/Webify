@@ -42,7 +42,9 @@ const HomePage = () => {
     const outgoingIds = new Set();
     if (outgoingFriendReqs && outgoingFriendReqs.length > 0) {
       outgoingFriendReqs.forEach((req) => {
-        outgoingIds.add(req.recipient._id);
+        if (req?.recipient?._id) {
+          outgoingIds.add(req.recipient._id);
+        }
       });
       setOutgoingRequestsIds(outgoingIds);
     }
@@ -123,7 +125,6 @@ const HomePage = () => {
                         </div>
                       </div>
 
-                      {/* Languages with flags */}
                       <div className="flex flex-wrap gap-1.5">
                         <span className="badge badge-secondary">
                           {getLanguageFlag(user.nativeLanguage)}
@@ -137,7 +138,6 @@ const HomePage = () => {
 
                       {user.bio && <p className="text-sm opacity-70">{user.bio}</p>}
 
-                      {/* Action button */}
                       <button
                         className={`btn w-full mt-2 ${
                           hasRequestBeenSent ? "btn-disabled" : "btn-primary"
