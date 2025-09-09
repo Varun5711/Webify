@@ -154,6 +154,3 @@ This project is licensed under the MIT License.
 
 ---
 
-⚡ This README is **production-style**: it explains the stack, gives an ASCII architecture diagram, setup, and usage.  
-
-Would you like me to also generate a **diagram image (SVG/PNG)** of the architecture (instead of ASCII), so it looks more polished in your GitHub repo?
