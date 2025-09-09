@@ -1,0 +1,56 @@
+version: "3.8"
+
+services:
+  nginx:
+    build:
+      context: ./gateway
+    image: webify-gateway:local
+    ports:
+      - "5001:5001"  
+    depends_on:
+      - user-service
+      - chat-service
+    networks:
+      - webify-net
+
+  user-service:
+    build:
+      context: ./services/user-service
+    image: webify-user:local
+    environment:
+      - PORT=3001
+      - MONGO_URL=mongodb://mongo:27017/userdb
+      - NODE_ENV=development
+    ports:
+      - "3001:3001" 
+    networks:
+      - webify-net
+    depends_on:
+      - mongo
+
+  chat-service:
+    build:
+      context: ./services/chat-service
+    image: webify-chat:local
+    environment:
+      - PORT=3002
+      - NODE_ENV=development
+    ports:
+      - "3002:3002"
+    networks:
+      - webify-net
+
+
+  mongo:
+    image: mongo:6
+    volumes:
+      - mongo-data:/data/db
+    networks:
+      - webify-net
+
+volumes:
+  mongo-data:
+
+networks:
+  webify-net:
+    driver: bridge

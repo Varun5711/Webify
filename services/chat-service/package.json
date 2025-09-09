@@ -1,0 +1,26 @@
+{
+  "name": "chat-service",
+  "version": "1.0.0",
+  "description": "chat-service",
+  "license": "ISC",
+  "author": "varun",
+  "type": "commonjs",
+  "main": "server.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "bcryptjs": "^3.0.2",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.2",
+    "express": "^5.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.18.1",
+    "stream-chat": "^9.19.0"
+  }
+}

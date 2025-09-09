@@ -1,13 +1,16 @@
 {
   "name": "streamify",
   "version": "1.0.0",
-  "main": "index.js",
+  "private": true,
+  "description": "Streamify microservices stack",
   "scripts": {
-    "build": "npm install --prefix backend && npm install --prefix frontend && npm run build --prefix frontend",
-    "start": "npm run start --prefix backend"
+    "dev": "docker-compose up --build",
+    "down": "docker-compose down",
+    "logs": "docker-compose logs -f",
+    "frontend:build": "npm install --prefix frontend && npm run build --prefix frontend",
+    "frontend:start": "npm start --prefix frontend"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
-  "description": ""
+  "license": "ISC"
 }
