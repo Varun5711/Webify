@@ -1,22 +1,3 @@
-Perfect 👍 let’s make a professional README.md for your project. I’ll assume your stack is:
-	•	Frontend → React/Next.js app (/frontend, runs on port 5173)
-	•	User-Service → Node.js/Express + MongoDB (/services/user-service, port 3001)
-	•	Chat-Service → Node.js/Express + MongoDB (/services/chat-service, port 3002)
-	•	Gateway → Nginx reverse proxy (/gateway, port 5001)
-	•	Database → MongoDB (for user + chat)
-
-I’ll include:
-	1.	Project intro
-	2.	Architecture diagram (ASCII-style, since markdown)
-	3.	Folder structure
-	4.	Setup instructions (local + docker-compose)
-	5.	Scripts
-	6.	Contribution & License
-
-⸻
-
-📄 README.md (for your repo)
-
 # Streamify 🎶💬
 
 A microservices-based web application with **user management** and **real-time chat**, built using Node.js, Express, MongoDB, React, and Nginx as an API Gateway.  
