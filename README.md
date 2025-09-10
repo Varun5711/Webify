@@ -1,4 +1,4 @@
-# Streamify 🎶💬
+# Webify 🎶💬
 
 A microservices-based web application with **user management** and **real-time chat**, built using Node.js, Express, MongoDB, React, and Nginx as an API Gateway.  
 This project demonstrates a clean **microservices architecture** with containerized deployment using **Docker Compose**.
